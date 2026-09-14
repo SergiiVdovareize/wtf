@@ -728,7 +728,7 @@ body {
     height: 12px;
   }
 
-  /* Right Side Panel on Mobile becomes stacked card below photo */
+  /* Right Side Panel on Mobile */
   .right-panel {
     position: relative;
     left: auto;
@@ -744,6 +744,7 @@ body {
     border-radius: 14px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
     gap: 16px;
+    margin-bottom: 160px; /* Space for bottom sheet & sticky footer */
   }
 
   .card-title-text {
@@ -754,19 +755,71 @@ body {
     font-size: 16px;
   }
 
-  .acc-btn {
-    max-width: 100%;
-    font-size: 16px;
-    padding: 12px 16px;
+  /* Accuracy Selector becomes a Bottom Sheet Modal on mobile without side margins */
+  .accuracy-block {
+    position: fixed;
+    bottom: 64px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 550;
+    background-color: #ffffff;
+    border-radius: 20px 20px 0 0;
+    padding: 16px 16px 12px 16px;
+    border-top: 1px solid var(--border-color);
+    box-shadow: 0 -10px 25px rgba(15, 23, 42, 0.15);
+    animation: slideUpSheet 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
-  /* Footer */
+  .accuracy-block::before {
+    content: '';
+    display: block;
+    width: 36px;
+    height: 4px;
+    background-color: #cbd5e1;
+    border-radius: 999px;
+    margin: 0 auto 10px auto;
+  }
+
+  .accuracy-label {
+    font-size: 15px;
+    font-weight: 800;
+    text-align: center;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .accuracy-buttons-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .acc-btn {
+    width: 100%;
+    max-width: 100%;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 11px 14px;
+    justify-content: center;
+    text-align: center;
+    border-radius: 12px;
+  }
+
+  /* Sticky Footer on Mobile */
   .app-footer {
-    height: auto;
-    padding: 12px 16px;
-    position: sticky;
+    height: 64px;
+    padding: 10px 16px;
+    position: fixed;
     bottom: 0;
-    z-index: 30;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 600;
+    background-color: #ffffff;
+    border-top: 1px solid var(--border-color);
     box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
   }
 
@@ -774,7 +827,7 @@ body {
     min-width: 100%;
     width: 100%;
     font-size: 18px;
-    padding: 14px 20px;
+    padding: 12px 20px;
   }
 
   /* Modals */
@@ -829,6 +882,17 @@ body {
 
   .factor-icon {
     font-size: 30px;
+  }
+}
+
+@keyframes slideUpSheet {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
