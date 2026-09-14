@@ -410,6 +410,7 @@ class WTFPresentationApp {
 
           ${this.isRevealed
         ? `
+              <!-- Desktop Right Panel -->
               <div class="right-panel">
                 <div class="title-block">
                   <h2 class="card-title-text">${item.title}</h2>
@@ -423,6 +424,26 @@ class WTFPresentationApp {
                     <button class="acc-btn ${this.selectedAccuracy === 2 ? 'selected' : ''}" data-acc="2"><span>Більш менш</span></button>
                     <button class="acc-btn ${this.selectedAccuracy === 3 ? 'selected' : ''}" data-acc="3"><span>Точно</span></button>
                     <button class="acc-btn ${this.selectedAccuracy === 4 ? 'selected' : ''}" data-acc="4" title="Точно назвала назву + пояснила де й як вживається"><span>Експерт</span></button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Mobile Bottom Sheet Modal -->
+              <div class="mobile-bottom-sheet">
+                <div class="mobile-sheet-content">
+                  <div class="mobile-title-block">
+                    <h2 class="mobile-card-title">${item.title}</h2>
+                    <p class="mobile-card-desc">${item.description}</p>
+                  </div>
+                  <div class="mobile-accuracy-block">
+                    <span class="accuracy-label">Результат</span>
+                    <div class="accuracy-buttons-grid">
+                      <button class="acc-btn ${this.selectedAccuracy === 0 ? 'selected' : ''}" data-acc="0"><span>Зовсім ні</span></button>
+                      <button class="acc-btn ${this.selectedAccuracy === 1 ? 'selected' : ''}" data-acc="1"><span>Трохи є</span></button>
+                      <button class="acc-btn ${this.selectedAccuracy === 2 ? 'selected' : ''}" data-acc="2"><span>Більш менш</span></button>
+                      <button class="acc-btn ${this.selectedAccuracy === 3 ? 'selected' : ''}" data-acc="3"><span>Точно</span></button>
+                      <button class="acc-btn ${this.selectedAccuracy === 4 ? 'selected' : ''}" data-acc="4" title="Точно назвала назву + пояснила де й як вживається"><span>Експерт</span></button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -443,9 +464,16 @@ class WTFPresentationApp {
     btns.forEach(btn => {
       btn.addEventListener('click', (e) => {
         if (window.soundEngine) window.soundEngine.playClick();
-        this.selectedAccuracy = parseInt(e.currentTarget.dataset.acc, 10);
-        btns.forEach(b => b.classList.remove('selected'));
-        e.currentTarget.classList.add('selected');
+        const accVal = parseInt(e.currentTarget.dataset.acc, 10);
+        this.selectedAccuracy = accVal;
+
+        btns.forEach(b => {
+          if (parseInt(b.dataset.acc, 10) === accVal) {
+            b.classList.add('selected');
+          } else {
+            b.classList.remove('selected');
+          }
+        });
 
         // Enable 'Далі' button as soon as an option is selected
         this.nextBtn.disabled = false;
