@@ -155,6 +155,7 @@ class WTFPresentationApp {
     this.scoreBadge = document.getElementById('scoreBadge');
     this.startModal = document.getElementById('startModal');
     this.startGameBtn = document.getElementById('startGameBtn');
+    this.appFooter = document.getElementById('appFooter');
     this.resultsModal = document.getElementById('resultsModal');
     this.restartBtn = document.getElementById('restartBtn');
   }
@@ -164,6 +165,9 @@ class WTFPresentationApp {
     this.progressBar.style.width = `0%`;
     this.nextBtn.disabled = true;
     this.nextBtn.classList.add('disabled');
+    if (this.appFooter) {
+      this.appFooter.classList.add('hidden');
+    }
     this.mainViewport.innerHTML = '';
   }
 
@@ -203,6 +207,9 @@ class WTFPresentationApp {
 
     if (this.startModal) {
       this.startModal.classList.add('hidden');
+    }
+    if (this.appFooter) {
+      this.appFooter.classList.remove('hidden');
     }
     this.render();
     this.startCardTimer();

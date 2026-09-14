@@ -374,6 +374,10 @@ body {
   flex-shrink: 0;
 }
 
+.app-footer.hidden {
+  display: none !important;
+}
+
 /* Single 'Далі' Button */
 .btn {
   font-family: var(--font-sans);
@@ -673,13 +677,14 @@ body {
   /* Main Viewport & Layout */
   .main-viewport {
     height: auto;
-    min-height: calc(100vh - 140px);
+    min-height: calc(100vh - 120px);
     overflow-y: visible;
     padding: 16px;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
 
   .img-wrapper {
@@ -691,10 +696,11 @@ body {
     max-width: 100%;
     height: auto;
     max-height: none;
-    margin: 0 auto;
+    margin: auto 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 16px;
   }
 
