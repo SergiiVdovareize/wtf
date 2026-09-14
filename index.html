@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WTF is This</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;600;700&family=Inter:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="app-header">
+    <h1 class="logo-title">WTF is This</h1>
+
+    <div class="header-center">
+      <span class="slide-badge" id="slideBadge">0 / 16</span>
+      <div class="progress-track">
+        <div class="progress-fill" id="progressBar" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <div class="header-stats">
+      <div class="stat-badge" id="timerBadge">⏱️ 00:00</div>
+      <div class="stat-badge score-badge" id="scoreBadge">⭐ 0 очок</div>
+      <button class="btn btn-secondary" id="fullscreenBtn" title="Повний екран">
+        <span class="btn-icon">⛶</span>
+        <span>Повний екран</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Viewport -->
+  <main class="main-viewport" id="mainViewport">
+    <!-- Injected by app.js -->
+  </main>
+
+  <!-- Footer Actions -->
+  <footer class="app-footer">
+    <button class="btn btn-primary btn-lg" id="nextBtn">
+      Далі
+    </button>
+  </footer>
+
+  <!-- Start / Rules Info Modal -->
+  <div class="modal-backdrop" id="startModal">
+    <div class="modal-box start-modal-box">
+      <div class="start-modal-header">
+        <div class="start-hero-emoji">🤔</div>
+        <h2 class="start-modal-title">WTF is This</h2>
+      </div>
+
+      <div class="start-modal-content">
+        <div class="start-section">
+          <h3 class="section-heading">💡 Суть гри</h3>
+          <p class="game-essence-text">
+            Перевірте свою ерудицію та інтуїцію! Головне завдання — впізнати загадковий предмет, інструмент чи деталь за її фотографією.
+          </p>
+        </div>
+
+        <div class="start-section">
+          <h3 class="section-heading">⭐ Нарахування балів</h3>
+          <p class="section-intro">Кількість отриманих балів за кожну картку залежить від факторів:</p>
+          <div class="factors-grid">
+            <div class="factor-card">
+              <span class="factor-icon">🧩</span>
+              <div class="factor-info">
+                <strong>Складність</strong>
+                <span>Картки від 1 до 5</span>
+              </div>
+            </div>
+            <div class="factor-card">
+              <span class="factor-icon">⏱️</span>
+              <div class="factor-info">
+                <strong>Швидкість</strong>
+                <span>Бонус часу</span>
+              </div>
+            </div>
+            <div class="factor-card">
+              <span class="factor-icon">🎯</span>
+              <div class="factor-info">
+                <strong>Точність</strong>
+                <span>Повнота відповіді</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn btn-primary btn-lg" id="startGameBtn">Розпочати гру</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Final Results Modal -->
+  <div class="modal-backdrop hidden" id="resultsModal">
+    <div class="modal-box">
+      <div class="results-hero">
+        <h2 class="results-title" id="finalRankBadge">👑 Експерт Механіки</h2>
+        <p class="results-score-num" id="finalScoreNum">0 очок</p>
+      </div>
+
+      <div class="results-breakdown" id="resultsBreakdown">
+        <!-- Injected list of scores per card -->
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn btn-primary btn-lg" id="restartBtn">🔄 Почати спочатку</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="sound.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
