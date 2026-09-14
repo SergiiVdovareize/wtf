@@ -674,17 +674,17 @@ body {
     display: none;
   }
 
-  /* Main Viewport & Layout */
+  /* Main Viewport & Layout on Mobile (30/70 vertical position: closer to top) */
   .main-viewport {
     height: auto;
     min-height: calc(100vh - 120px);
     overflow-y: visible;
-    padding: 16px;
+    padding: 16px 16px 32px 16px;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .img-wrapper {
@@ -696,11 +696,12 @@ body {
     max-width: 100%;
     height: auto;
     max-height: none;
-    margin: auto 0;
+    margin-top: 3vh;
+    margin-bottom: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 16px;
   }
 
