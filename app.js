@@ -14,7 +14,7 @@ const CARDS_DECK = [
     id: 'm2_ssd',
     title: 'Твердотільний накопичувач M.2 NVMe SSD',
     description: 'Швидкісний компактний модуль енергонезалежної пам\'яті для ПК та ноутбуків.',
-    image: './assets/images/item_6_m2_ssd.png',
+    image: './assets/images/item_6_m2_ssd.jpeg',
     difficulty: 1
   },
   {
@@ -49,14 +49,14 @@ const CARDS_DECK = [
     id: 'heat_shrink',
     title: 'Термоусадочна ізоляційна трубка',
     description: 'Полімерна трубка, яка стискається при нагріванні для герметичної ізоляції з\'єднань дротів.',
-    image: './assets/images/item_12_heat_shrink.webp',
+    image: './assets/images/item_12_heat_shrink.jpeg',
     difficulty: 1
   },
   {
     id: 'brake_pads',
     title: 'Гальмівні колодки обідного гальма',
     description: 'Гумові вставки із замінними картриджами, які затискають обід колеса для гальмування.',
-    image: './assets/images/item_13_brake_pads.jpg',
+    image: './assets/images/item_13_brake_pads.jpeg',
     difficulty: 4
   },
   {
@@ -98,7 +98,7 @@ const CARDS_DECK = [
     id: 'chain_gauge',
     title: 'Індикатор зносу велосипедного ланцюга',
     description: 'Шаблон з двома щупами для перевірки розтягування ланок та контролю зносу ланцюга.',
-    image: './assets/images/item_11_chain_gauge.jpg',
+    image: './assets/images/item_11_chain_gauge.jpeg',
     difficulty: 5
   },
   {
