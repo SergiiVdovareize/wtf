@@ -7,112 +7,112 @@ const CARDS_DECK = [
     id: 'sata_cable',
     title: 'SATA-кабель',
     description: 'Кабель для підключення жорстких дисків та SSD накопичувачів до материнської плати ПК.',
-    image: './assets/images/item_2_sata_cable.jpg',
+    image: './assets/images/item_2_sata_cable.webp',
     difficulty: 1
   },
   {
     id: 'm2_ssd',
     title: 'Твердотільний накопичувач M.2 NVMe SSD',
     description: 'Швидкісний компактний модуль енергонезалежної пам\'яті для ПК та ноутбуків.',
-    image: './assets/images/item_6_m2_ssd.jpeg',
+    image: './assets/images/item_6_m2_ssd.webp',
     difficulty: 1
   },
   {
     id: 'thermal_paste',
     title: 'Теплопровідна паста',
     description: 'Склад для заповнення мікрозазорів між чипом процесора та радіатором охолодження.',
-    image: './assets/images/item_14_thermal_paste.jpg',
+    image: './assets/images/item_14_thermal_paste.webp',
     difficulty: 2
   },
   {
     id: 'kanifol',
     title: 'Соснова каніфоль',
     description: 'Тверда смола для знімання оксидів з металу та якісного лудження дротів під час паяння.',
-    image: './assets/images/item_5_kanifol.jpg',
+    image: './assets/images/item_5_kanifol.webp',
     difficulty: 2
   },
   {
     id: 'tire_levers',
     title: 'Велосипедні бортувальні лопатки',
     description: 'Міцні важелі для легкого знімання та монтажу покришки на велосипедний обід.',
-    image: './assets/images/item_7_tire_levers.jpeg',
+    image: './assets/images/item_7_tire_levers.webp',
     difficulty: 1
   },
   {
     id: 'anchor_bolt',
     title: 'Розпірний анкерний болт',
     description: 'Силове металеве кріплення, що розклинюється всередині бетону чи цегли для важких конструкцій.',
-    image: './assets/images/item_15_anchor_bolt.jpg',
+    image: './assets/images/item_15_anchor_bolt.webp',
     difficulty: 3
   },
   {
     id: 'heat_shrink',
     title: 'Термоусадочна ізоляційна трубка',
     description: 'Полімерна трубка, яка стискається при нагріванні для герметичної ізоляції з\'єднань дротів.',
-    image: './assets/images/item_12_heat_shrink.jpeg',
+    image: './assets/images/item_12_heat_shrink.webp',
     difficulty: 1
   },
   {
     id: 'brake_pads',
     title: 'Гальмівні колодки обідного гальма',
     description: 'Гумові вставки із замінними картриджами, які затискають обід колеса для гальмування.',
-    image: './assets/images/item_13_brake_pads.jpeg',
+    image: './assets/images/item_13_brake_pads.webp',
     difficulty: 4
   },
   {
     id: 'presta_valve',
     title: 'Ніпель Presta',
     description: 'Велосипедний ніпель, який дозволяє накачати тонкий велосипедний ніпель Presta автонасосом.',
-    image: './assets/images/item_3_presta_valve.jpg',
+    image: './assets/images/item_3_presta_valve.webp',
     difficulty: 1
   },
   {
     id: 'spoke_wrench',
     title: 'Спицевий ключ для велосипедних коліс',
     description: 'Ключ із прорізами для регулювання натягу спиць та усунення викривлень обода колеса.',
-    image: './assets/images/item_16_spoke_wrench.png',
+    image: './assets/images/item_16_spoke_wrench.webp',
     difficulty: 4
   },
   {
     id: 'screw_extractor',
     title: 'Екстрактор для викручування зламаних болтів',
     description: 'Інструмент із лівою спіральною різьбою для викручування заламаних та злизаних кріплень.',
-    image: './assets/images/item_1_screw_extractor.jpg',
+    image: './assets/images/item_1_screw_extractor.webp',
     difficulty: 5
   },
   {
     id: 'pocket_saw',
     title: 'Кишенькова ланцюгова туристична пила',
     description: 'Гнучкий сталевий ланцюг із двома ручками для швидкого пиляння дров у поході.',
-    image: './assets/images/item_10_pocket_saw.jpg',
+    image: './assets/images/item_10_pocket_saw.webp',
     difficulty: 1
   },
   {
     id: 'wheel_lock',
     title: 'Ключ-адаптер для автомобільних болтів-секреток',
     description: 'Спеціальна насадка з унікальним фігурним візерунком для захисту коліс від крадіжки.',
-    image: './assets/images/item_4_wheel_lock.jpg',
+    image: './assets/images/item_4_wheel_lock.webp',
     difficulty: 3
   },
   {
     id: 'chain_gauge',
     title: 'Індикатор зносу велосипедного ланцюга',
     description: 'Шаблон з двома щупами для перевірки розтягування ланок та контролю зносу ланцюга.',
-    image: './assets/images/item_11_chain_gauge.jpeg',
+    image: './assets/images/item_11_chain_gauge.webp',
     difficulty: 5
   },
   {
     id: 'cmos_jumper',
     title: 'Перемикач-джампер BIOS/CMOS',
     description: 'Маленька перемичка для замикання контактів та скидання налаштувань материнської плати.',
-    image: './assets/images/item_9_cmos_jumper.jpg',
+    image: './assets/images/item_9_cmos_jumper.webp',
     difficulty: 5
   },
   {
     id: 'tap_die',
     title: 'Метчик та плашка',
     description: 'Інструменти для нарізання нової та відновлення пошкодженої внутрішньої й зовнішньої різьби.',
-    image: './assets/images/item_8_tap_die.jpg',
+    image: './assets/images/item_8_tap_die.webp',
     difficulty: 5
   }
 ];
