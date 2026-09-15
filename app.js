@@ -157,7 +157,6 @@ class WTFPresentationApp {
     this.startGameBtn = document.getElementById('startGameBtn');
     this.appFooter = document.getElementById('appFooter');
     this.resultsModal = document.getElementById('resultsModal');
-    this.restartBtn = document.getElementById('restartBtn');
   }
 
   renderInitialState() {
@@ -177,7 +176,6 @@ class WTFPresentationApp {
     }
     this.nextBtn.addEventListener('click', () => this.handleNext());
     this.fullscreenBtn.addEventListener('click', () => this.toggleFullscreen());
-    this.restartBtn.addEventListener('click', () => this.restartGame());
 
     window.addEventListener('keydown', (e) => {
       if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
@@ -492,6 +490,12 @@ class WTFPresentationApp {
   showFinalResults() {
     this.stopCardTimer();
 
+    // Clear main viewport (remove image and side/mobile panel) when results are shown
+    this.mainViewport.innerHTML = '';
+    if (this.appFooter) {
+      this.appFooter.classList.add('hidden');
+    }
+
     document.getElementById('finalScoreNum').textContent = `${this.totalScore} очок`;
 
     let rankTitle = '🏆 Гран-Майстер Механіки';
@@ -511,13 +515,13 @@ class WTFPresentationApp {
     const breakdownEl = document.getElementById('resultsBreakdown');
     breakdownEl.innerHTML = this.cardScores.map((sc, idx) => `
       <div class="breakdown-row">
-        <div>
-          <strong>${idx + 1}. ${sc.title}</strong>
-          <div style="color:var(--text-secondary); font-size:12px;">
-            Складність: ${sc.difficulty}/5 | Час: ${sc.seconds}с (${sc.timeMult}x) | Відповідь: ${accLabelMap[sc.accuracyLevel] || 'Зовсім ні'}
+        <div class="breakdown-info">
+          <strong class="breakdown-title">${idx + 1}. ${sc.title}</strong>
+          <div class="breakdown-meta">
+            Складність: ${sc.difficulty}/5 | Час: ${sc.seconds}с (${sc.timeMult}x) | Відповідь: <strong>${accLabelMap[sc.accuracyLevel] || 'Зовсім ні'}</strong>
           </div>
         </div>
-        <strong style="color:var(--accent-blue); font-size:15px;">+${sc.points}</strong>
+        <strong class="breakdown-points">+${sc.points}</strong>
       </div>
     `).join('');
 
