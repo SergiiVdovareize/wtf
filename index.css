@@ -369,8 +369,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--bg-surface);
-  border-top: 2px solid var(--border-color);
+  background-color: transparent;
+  border-top: none;
   flex-shrink: 0;
 }
 
@@ -539,6 +539,13 @@ body {
   font-size: 20px;
   font-weight: 900;
   white-space: nowrap;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 /* Start / Rules Modal Specific Styles */
@@ -870,9 +877,10 @@ body {
     right: 0;
     width: 100%;
     z-index: 600;
-    background-color: #ffffff;
-    border-top: 1px solid var(--border-color);
-    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
+    background-color: transparent;
+    border-top: none;
+    box-shadow: none;
+    pointer-events: none;
   }
 
   #nextBtn {
@@ -880,6 +888,7 @@ body {
     width: 100%;
     font-size: 18px;
     padding: 12px 20px;
+    pointer-events: auto;
   }
 
   /* Modals */
