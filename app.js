@@ -121,6 +121,13 @@ const CARDS_DECK = [
     description: 'Електричний захисний елемент у міцному керамічному корпусі для автоматичного розмикання кола при перевантаженні.',
     image: './assets/images/item_17_ceramic_fuse.webp',
     difficulty: 2
+  },
+  {
+    id: 'hockey_jockstrap',
+    title: 'Хокейна ракушка (захисна чашка)',
+    description: 'Елемент спортивного захисного екіпірування для захисту пахової ділянки від ударів шайбою чи ключкою.',
+    image: './assets/images/item_18_hockey_jockstrap.webp',
+    difficulty: 3
   }
 ];
 
