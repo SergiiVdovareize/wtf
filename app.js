@@ -114,6 +114,13 @@ const CARDS_DECK = [
     description: 'Інструменти для нарізання нової та відновлення пошкодженої внутрішньої й зовнішньої різьби.',
     image: './assets/images/item_8_tap_die.webp',
     difficulty: 5
+  },
+  {
+    id: 'ceramic_fuse',
+    title: 'Запобіжник циліндричний керамічний',
+    description: 'Електричний захисний елемент у міцному керамічному корпусі для автоматичного розмикання кола при перевантаженні.',
+    image: './assets/images/item_17_ceramic_fuse.webp',
+    difficulty: 2
   }
 ];
 
