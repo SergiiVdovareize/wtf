@@ -117,7 +117,7 @@ const CARDS_DECK = [
   },
   {
     id: 'ceramic_fuse',
-    title: 'Запобіжник циліндричний керамічний',
+    title: 'Запобіжник циліндричний',
     description: 'Електричний захисний елемент у міцному керамічному корпусі для автоматичного розмикання кола при перевантаженні.',
     image: './assets/images/item_17_ceramic_fuse.webp',
     difficulty: 2
