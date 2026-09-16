@@ -121,13 +121,6 @@ const CARDS_DECK = [
     description: 'Електричний захисний елемент у міцному керамічному корпусі для автоматичного розмикання кола при перевантаженні.',
     image: './assets/images/item_17_ceramic_fuse.webp',
     difficulty: 2
-  },
-  {
-    id: 'plug_fuse',
-    title: 'Запобіжник керамічний (Пробка)',
-    description: 'Побутовий різьбовий запобіжник у керамічному корпусі для захисту електромережі від перевантаження.',
-    image: './assets/images/item_18_plug_fuse.webp',
-    difficulty: 1
   }
 ];
 
