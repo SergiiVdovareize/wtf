@@ -196,7 +196,7 @@ body {
   justify-content: center;
 }
 
-/* Image Container: Tight wrapper around rendered photo bitmap with convex shadow effect */
+/* Image Container: Tight wrapper around rendered photo bitmap */
 .img-container {
   position: relative;
   max-width: 100%;
@@ -206,11 +206,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 14px;
-  box-shadow:
-    0 20px 45px -10px rgba(15, 23, 42, 0.3),
-    0 8px 20px -6px rgba(15, 23, 42, 0.18),
-    inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
 /* Difficulty Tag: Positioned INSIDE the top-left corner of the image photo frame */
@@ -257,7 +252,7 @@ body {
   border-style: solid;
 }
 
-/* Image Element with 14px border radius strictly capped to vertical viewport height */
+/* Image Element with crisp pop-out shadow directly on the image */
 .slide-img {
   max-width: 100%;
   max-height: calc(100vh - 76px - 76px - 40px);
@@ -267,6 +262,9 @@ body {
   border: 1px solid rgba(226, 232, 240, 0.9);
   border-radius: 14px;
   display: block;
+  box-shadow:
+    0 6px 16px -2px rgba(15, 23, 42, 0.20),
+    0 2px 5px -1px rgba(15, 23, 42, 0.14);
 }
 
 /* Right Side Panel: Fills 100% of all remaining horizontal space to the right of the centered image */
@@ -352,9 +350,8 @@ body {
   max-width: 240px;
   transition: all 0.15s ease;
   box-shadow:
-    0 4px 12px -2px rgba(15, 23, 42, 0.06),
-    0 2px 4px -1px rgba(15, 23, 42, 0.04),
-    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    0 3px 6px -1px rgba(15, 23, 42, 0.08),
+    0 1px 2px rgba(15, 23, 42, 0.05);
 }
 
 .acc-btn:hover {
@@ -363,9 +360,8 @@ body {
   color: #3730a3;
   transform: translateY(-1px);
   box-shadow:
-    0 6px 16px -2px rgba(99, 102, 241, 0.16),
-    0 2px 6px -1px rgba(99, 102, 241, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 1);
+    0 5px 12px -2px rgba(99, 102, 241, 0.20),
+    0 2px 4px -1px rgba(99, 102, 241, 0.12);
 }
 
 .acc-btn.selected {
@@ -529,18 +525,16 @@ body {
   border-radius: 12px;
   gap: 16px;
   box-shadow:
-    0 6px 16px -4px rgba(15, 23, 42, 0.07),
-    0 2px 6px -1px rgba(15, 23, 42, 0.04),
-    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    0 3px 8px -1px rgba(15, 23, 42, 0.08),
+    0 1px 2px rgba(15, 23, 42, 0.05);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .breakdown-row:hover {
   transform: translateY(-1px);
   box-shadow:
-    0 8px 20px -4px rgba(15, 23, 42, 0.11),
-    0 3px 8px -2px rgba(15, 23, 42, 0.06),
-    inset 0 1px 0 rgba(255, 255, 255, 1);
+    0 5px 12px -2px rgba(15, 23, 42, 0.12),
+    0 2px 4px -1px rgba(15, 23, 42, 0.06);
 }
 
 .breakdown-info {
@@ -615,9 +609,8 @@ body {
   border-radius: 14px;
   padding: 18px 22px;
   box-shadow:
-    0 6px 16px -4px rgba(15, 23, 42, 0.05),
-    0 2px 5px -1px rgba(15, 23, 42, 0.03),
-    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+    0 3px 8px -1px rgba(15, 23, 42, 0.06),
+    0 1px 2px rgba(15, 23, 42, 0.04);
 }
 
 .section-heading {
@@ -656,19 +649,17 @@ body {
   align-items: center;
   text-align: center;
   gap: 8px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
   box-shadow:
-    0 8px 20px -4px rgba(15, 23, 42, 0.08),
-    0 4px 8px -2px rgba(15, 23, 42, 0.04),
-    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    0 3px 8px -1px rgba(15, 23, 42, 0.10),
+    0 1px 2px rgba(15, 23, 42, 0.06);
 }
 
 .factor-card:hover {
   transform: translateY(-2px);
   box-shadow:
-    0 12px 24px -4px rgba(15, 23, 42, 0.12),
-    0 6px 12px -2px rgba(15, 23, 42, 0.06),
-    inset 0 1px 0 rgba(255, 255, 255, 1);
+    0 6px 12px -2px rgba(15, 23, 42, 0.14),
+    0 2px 4px -1px rgba(15, 23, 42, 0.08);
 }
 
 .factor-card:nth-child(1) {
