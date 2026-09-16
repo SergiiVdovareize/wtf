@@ -124,10 +124,17 @@ const CARDS_DECK = [
   },
   {
     id: 'hockey_jockstrap',
-    title: 'Хокейна ракушка (захисна чашка)',
+    title: 'Хокейна ракушка',
     description: 'Елемент спортивного захисного екіпірування для захисту пахової ділянки від ударів шайбою чи ключкою.',
     image: './assets/images/item_18_hockey_jockstrap.webp',
     difficulty: 3
+  },
+  {
+    id: 'liquid_cooling',
+    title: 'Система рідинного охолодження ПК',
+    description: 'Замкнута система з помпою, водоблоком та радіатором для ефективного відведення тепла від процесора.',
+    image: './assets/images/item_19_liquid_cooling.webp',
+    difficulty: 2
   }
 ];
 
@@ -164,7 +171,6 @@ class WTFPresentationApp {
     this.slideBadge = document.getElementById('slideBadge');
     this.progressBar = document.getElementById('progressBar');
     this.nextBtn = document.getElementById('nextBtn');
-    this.fullscreenBtn = document.getElementById('fullscreenBtn');
     this.timerBadge = document.getElementById('timerBadge');
     this.scoreBadge = document.getElementById('scoreBadge');
     this.startModal = document.getElementById('startModal');
@@ -189,7 +195,6 @@ class WTFPresentationApp {
       this.startGameBtn.addEventListener('click', () => this.startGame());
     }
     this.nextBtn.addEventListener('click', () => this.handleNext());
-    this.fullscreenBtn.addEventListener('click', () => this.toggleFullscreen());
 
     window.addEventListener('keydown', (e) => {
       if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
@@ -289,9 +294,9 @@ class WTFPresentationApp {
     const difficulty = item.difficulty || 3;
 
     let timeMult = 1.0;
-    if (this.cardSeconds <= 20) {
+    if (this.cardSeconds <= 30) {
       timeMult = 1.5;
-    } else if (this.cardSeconds <= 50) {
+    } else if (this.cardSeconds <= 60) {
       timeMult = 1.2;
     }
 
@@ -410,7 +415,7 @@ class WTFPresentationApp {
 
     this.slideBadge.textContent = `${this.currentIndex + 1} / ${total}`;
     this.progressBar.style.width = `${progressPct}%`;
-    this.nextBtn.textContent = 'Далі';
+    this.nextBtn.textContent = this.isRevealed ? 'Наступна картка' : 'Подивитись відповідь';
 
     // Lock 'Далі' button if revealed and no option selected yet
     if (this.isRevealed && this.selectedAccuracy === null) {
@@ -546,14 +551,6 @@ class WTFPresentationApp {
   restartGame() {
     this.resultsModal.classList.add('hidden');
     this.startGame();
-  }
-
-  toggleFullscreen() {
-    if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen().catch(err => console.log(err));
-    } else {
-      if (document.exitFullscreen) document.exitFullscreen();
-    }
   }
 }
 
